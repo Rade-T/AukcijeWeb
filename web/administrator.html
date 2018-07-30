@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Administrator</title>
+	<script src="js/jquery-2.1.0.min.js"></script>
+	<script src="js/administrator.js"></script>
+</head>
+	<body>
+		<input id="editPersonalData" type="button" value="Izmeni Licne podatke"/>
+		<input id="editPassword" type="button" value="Izmeni lozinku"/>
+		<input id="logout" type="button" value="Odjavi se"/>
+		
+		<div id="personalData">
+			<form id="personalDataForm">
+				<input id="personalUserId" type="hidden"/>
+				<input id="personalRole" type="hidden"/>
+				<input id="personalPassword" type="hidden"/>
+				Ime
+				<input id="personalNameInput" type="text" name="name"/><br/>
+				Adresa
+				<input id="personalAddressInput" type="text" name="address"/><br/>
+				Email
+				<input id="personalEmailInput" type="text" name="email"/><br/>
+				Telefon
+				<input id="personalPhoneInput" type="text" name="phone"/><br/>
+				<input id="personalSaveButton" type="button" value="Sacuvaj" />
+			</form>
+		</div>
+		
+		<div id="passwordChangeDiv">
+			
+			<form id="passwordForm">
+				Nova lozinka
+				<input id="newPassword" type="password"/><br/>
+				<input id="saveEditPassword" type="button" value="Promeni"/>
+			</form>
+		</div><br/>
+	
+		<div id="itemsDiv">
+			<form id="newItemForm">
+				Ime
+				<input id="itemNameInput" type="text"/><br/>
+				Opis
+				<input id="itemDescriptionInput" type="text"/><br/>
+				<input id="itemSaveButton" type="button" value="Dodaj" />
+			</form>
+			
+			<form id="editItemForm">
+				<input id="itemId" type="hidden"/>
+				Ime
+				<input id="editItemNameInput" type="text"/><br/>
+				Opis
+				<input id="editItemDescriptionInput" type="text"/><br/>
+				<input id="editItemSaveButton" type="button" value="Izmeni"/>
+			</form>
+			
+			<input id="addItemButton" type="button" value="Novi predmet"/>
+			<table id="itemTable" border="1"></table><br/>
+		</div>
+		
+		<div id="auctionsDiv">
+			<form id="newAuctionForm">
+				Pocetna cena
+				<input id="startPriceInput" type="text"/><br/>
+				Pocetni datum
+				<input id="startDateInput" type="datetime-local"/><br/>
+				Zavrsni datum
+				<input id="endDateInput" type="datetime-local"/><br/>
+				<input id="auctionUserTxt" type="hidden"/>
+				<input id="auctionItemTxt" type="hidden"/>
+				<div id="auctionUserDiv">
+					<ul id="auctionUserList"></ul>
+				</div><br/>
+				<div id="auctionItemDiv">
+					<ul id="auctionItemsList"></ul>
+				</div>
+				<input id="auctionUserId" type="hidden"/>
+				<input id="auctionItemId" type="hidden"/>
+				<input id="auctionSaveButton" type="button" value="Dodaj" />
+			</form>
+			
+			<form id="editAuctionForm">
+				<input id="auctionId" type="hidden"/>
+				<input id="editStartPriceInput" type="text"/><br/>
+				<input id="editStartDateInput" type="datetime-local"/><br/>
+				<input id="editEndDateInput" type="datetime-local"/><br/>
+				<div id="editAuctionUserDiv" style="overflow:auto; height:75px;">
+					<ul id="editAuctionUserList"></ul><br/>
+				</div><br/>
+				<div id="editAuctionItemDiv" style="overflow:auto; height:75px;">
+					<ul id="editAuctionItemsList"></ul>
+				</div>
+				<input id="editAuctionUserTxt" type="hidden"/>
+				<input id="editAuctionItemTxt" type="hidden"/>
+				<input id="editAuctionSaveButton" type="button" value="Izmeni"/>
+			</form>
+			
+			<input id="addAuctionButton" type="button" value="Nova aukcija"/>
+			<table id="auctionTable" border="1"></table><br/>
+		</div>
+	
+		<div id="usersDiv">
+			<form id="addNewForm">
+				Ime
+				<input id="nameInput" type="text" name="name"/><br/>
+				Adresa
+				<input id="addressInput" type="text" name="address"/><br/>
+				Email
+				<input id="emailInput" type="text" name="email"/><br/>
+				Lozinka
+				<input id="passwordInput" type="password" name="password"/><br/>
+				<input id="pictureInput" type="hidden" name="picture" value=""/>
+				Telefon
+				<input id="phoneInput" type="text" name="phone"/><br/>
+				Uloga
+				<input id="roleInput" type="text" name="role"/><br/>
+				<input id="saveButton" type="button" value="Dodaj" />
+			</form>
+			
+			<form id="editForm">
+				<input id="userId" type="hidden"/>
+				Ime
+				<input id="nameEditInput" type="text" name="name"/><br/>
+				Adresa
+				<input id="addressEditInput" type="text" name="address"/><br/>
+				Email
+				<input id="emailEditInput" type="text" name="email"/><br/>
+				Lozinka
+				<input id="passwordEditInput" type="password" name="password"/><br/>
+				<input id="pictureEditInput" type="hidden" name="picture" value=""/>
+				Telefon
+				<input id="phoneEditInput" type="text" name="phone"/><br/>
+				Uloga
+				<input id="roleEditInput" type="text" name="role"/><br/>
+				<input id="saveEditButton" type="button" value="Izmeni" />
+			</form>
+			
+			<input id="addUserButton" type="button" value="Novi korisnik"/>
+			<table id="userTable" border="1"></table>
+		</div>
+		
+		<br/>
+		<div id="bidsDiv">
+			<table id="bidTable" border="1"></table>
+		</div>
+	</body>
+</html>
